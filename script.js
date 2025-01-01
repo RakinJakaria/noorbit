@@ -20,7 +20,7 @@ searchButton.addEventListener('click', async () => {
 
         try {
             // Construct the API URL dynamically based on the input
-            const apiUrl = `http://api.alquran.cloud/v1/search/${encodeURIComponent(query)}/${surah}/${edition}`;
+            const apiUrl = `https://api.alquran.cloud/v1/search/${encodeURIComponent(query)}/${surah}/${edition}`;
             console.log("Requesting API URL: ", apiUrl); // Log URL for debugging
             
             const response = await fetch(apiUrl);
