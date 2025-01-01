@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilm AI - Quranic Reflection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animated-background.css">
+    <!-- Add Font Awesome for Instagram icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- Homepage section (fixed) -->
+    <div class="homepage">
+        <div class="logo">
+            <img src="logo.png" alt="ILM AI Logo" />
+        </div>
+        <!-- Container will stay fixed here -->
+        <div class="container">
+            <h1>Quranic Reflection</h1>
+            <p>Input a topic, and get Quranic verses on that topic!</p>
+            <div>
+                <input type="text" id="search-input" placeholder="Enter a topic (e.g. patience)" />
+                <button id="search-button" class="ask-button"><span>Search</span></button>
+            </div>
+            <div id="results">
+                <!-- The response from the API will show up here -->
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrollable section (starts after results) -->
+    <div class="scrollable-section">
+        <!-- Social Media section -->
+        <div class="social-media">
+            <a href="https://www.instagram.com/akhi_rakin/" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/rakintheninja/" target="_blank" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://linktr.ee/akhirakin" class="linktree" target="_blank">
+                <i class="fas fa-tree"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
