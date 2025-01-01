@@ -1,0 +1,278 @@
+/* Basic layout */
+body {
+    font-family: 'Exo', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Full height of the page */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1 {
+    font-family: 'Exo', sans-serif; /* Change font */
+    font-size: 50px; /* Adjust font size */
+    color: #333; /* Change text color */
+    text-align: center; /* Center align text */
+    margin-top: 10px;
+    margin-bottom: 5px; /* Add space below */
+    letter-spacing: 1px; /* Add spacing between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+.wrapper {
+    position: relative;
+    min-height: 100vh; /* Allows scrolling */
+    padding-bottom: 100px; /* Space for social media icons */
+}
+
+.logo {
+    position: relative;
+    left: 2.5rem;
+    z-index: 2; /* Ensure it's above other content */
+}
+
+.logo img {
+    width: 170px;
+    height: auto;
+}
+
+/* Background adjustments */
+.area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.circles li {
+    position: absolute;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+/* Container styling */
+.container {
+    position: relative; /* Keeps the container in its place as the page scrolls */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    max-width: 90%;
+    margin-bottom: 40px; /* Ensures space for scrolling */
+    width: 50%; /* Start with 50% width */
+    transition: width 0.8s ease; /* Add a smooth transition for width */
+}
+
+/* Expanded container styling */
+.container.expanded {
+    width: 90%; /* Change width to 90% when expanded */
+}
+
+/* Remove internal scroll from the container */
+#results {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    /* Removed max-height and overflow properties */
+}
+
+/* Wrapper section */
+.wrapper {
+    min-height: 100vh; /* Allow for scrolling */
+}
+
+.container h1 {
+    color: #333;
+    font-size: 36px;
+}
+
+.container p {
+    color: #555;
+    font-size: 18px;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #f06c3f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #21242c;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Results area */
+#results {
+    margin-top: 20px;
+    /* No max-height or overflow-y: auto */
+    width: 100%;
+    text-align: left;
+}
+
+/* Social Media */
+.social-media {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media a {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+    background-color: #f06c3f;
+}
+
+.social-media a i {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a.instagram i,
+.social-media a.facebook i,
+.social-media a.linktree i {
+    color: #f06c3f;
+}
+
+.social-media a:hover i {
+    color: #ffffff;
+}
+
+
+/* For all screens */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* For screens 768px or below */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Ensure no horizontal scroll */
+    }
+
+    .container {
+        width: 100%; /* Ensure the container takes full width */
+        margin: 0; /* Remove margins that might cause overflow */
+        padding: 0 10px; /* Add a small padding for mobile view */
+    }
+
+    .logo {
+        position: relative;
+        left: 1rem;
+        z-index: 2; /* Ensure it's above other content */
+    }
+    
+    .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+
+    .social-media {
+        position: fixed;
+        bottom: 10px; /* Adjust bottom position if necessary */
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 0.5rem; /* Reduce gap between social media icons */
+        size: 20px;
+    }
+}
+
+/* For very small devices (below 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 5px; /* Adjust padding */
+    }
+
+    .logo {
+        position: relative;
+        left: 1rem;
+        z-index: 2; /* Ensure it's above other content */
+    }
+    
+    .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+
+    .social-media {
+        bottom: 5px; /* Adjust bottom position */
+        size: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .social-media a {
+        width: 45px; /* Decrease width */
+        height: 45px; /* Decrease height */
+    }
+
+    .social-media a i {
+        font-size: 1.2rem; /* Decrease font size of icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media a {
+        width: 35px; /* Further decrease for very small screens */
+        height: 35px;
+    }
+
+    .social-media a i {
+        font-size: 1rem; /* Further decrease icon size */
+    }
+}
