@@ -2,6 +2,7 @@
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
 const resultsDiv = document.getElementById('results');
+const container = document.querySelector('.container');
 
 // Initialize a counter for Arabic serial numbers
 let arabicSerialNumber = 1;
@@ -99,6 +100,9 @@ searchButton.addEventListener('click', async () => {
     } else {
         resultsDiv.innerHTML = `<p>Please enter a keyword.</p>`;
     }
+
+    // Expand the container width after the search
+    container.classList.add('expanded');
 });
 
 // Scroll control with arrow keys
@@ -122,17 +126,3 @@ function convertToArabicNumerals(num) {
     const arabicNumerals = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
     return num.toString().split('').map(digit => arabicNumerals[parseInt(digit)]).join('');
 }
-
-
-
-// Select the container
-const container = document.querySelector('.container');
-
-// Add event listener for search button
-searchButton.addEventListener('click', async () => {
-    const query = searchInput.value.trim().toLowerCase();
-
-    // Expand the container width
-    container.classList.add('expanded');
-
-}); 
